@@ -63,66 +63,63 @@ public class player : MonoBehaviour {
     {
         if (plyer_number == PLAYER_NUM.TWO)
         {
-            zAxis = Input.GetAxis("Horizontal");
-            xAxis = Input.GetAxis("Vertical");
-            movementValue = zAxis * dirToEnemy;
-            //if(xAxis > 0 && !isJumping)
-
-            //if (/*xAxis > 0 && xAxis < 0.1f*/Input.GetKeyDown(KeyCode.UpArrow))
-            //{
-            //    anim.SetBool("jump", true);
-
-            //}
-            //else
-            //{
-            //    anim.SetBool("jump", false);
-            //}
-            //if (Input.GetKey(KeyCode.LeftShift) && zAxis * dirToEnemy > 0)
-            //{
-            //    run = true;
-            //}
-            //else
-            //{
-            //    run = false;
-            //}
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                movementValue = Mathf.Clamp(movementValue - (Time.deltaTime * 2f), -1f, 1f);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                movementValue = Mathf.Clamp(movementValue + (Time.deltaTime * 2f) , -1f, 1f);
+            }
+            else
+            {
+                if (movementValue > 0f)
+                {
+                    movementValue = Mathf.Clamp(movementValue - (Time.deltaTime * 2f), 0, 1f);
+                }
+                else if (movementValue < 0f)
+                {
+                    movementValue = Mathf.Clamp(movementValue + (Time.deltaTime * 2f), -1f, 0f);
+                }
+            }
+           
+            
         }
         else
         {
-           
-            zAxis = Input.GetAxis("Horizontal_p2");
-            xAxis = Input.GetAxis("Vertical_p2");
-            //if(Input.GetAxis("Horizontal_p2") < 0.1f && Input.GetAxis("Horizontal_p2") > -0.1f)
-            movementValue = zAxis * dirToEnemy;
+            if (Input.GetKey(KeyCode.A))
+            {
+                movementValue = Mathf.Clamp(movementValue - (Time.deltaTime * 2f), -1f, 1f);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                movementValue = Mathf.Clamp((Time.deltaTime * 2f) + movementValue, -1f, 1f);
+            }
+            else
+            {
+                if (movementValue > 0f)
+                {
+                    movementValue = Mathf.Clamp(movementValue - (Time.deltaTime * 2f), 0, 1f);
+                }
+                else if (movementValue < 0f)
+                {
+                    movementValue = Mathf.Clamp(movementValue + (Time.deltaTime * 2f), -1f, 0f);
+                }
+            }
             
-            //if (/*xAxis > 0 && xAxis < 0.1f*/Input.GetKeyDown(KeyCode.W))
-            //{
-            //    anim.SetBool("jump", true);
-
-            //}
-            //else
-            //{
-            //    anim.SetBool("jump", false);
-            //}
-            //if (Input.GetKey(KeyCode.LeftShift) && zAxis * dirToEnemy > 0)
-            //{
-            //    run = true;
-            //}
-            //else
-            //{
-            //    run = false;
-            //}
+           
         }
 
 
-        anim.SetFloat("inputH", movementValue);
+        anim.SetFloat("inputH", movementValue * dirToEnemy);
         //anim.SetFloat("inputV", xAxis);
         //anim.SetBool("run", run);
         float moveX = 0;//xAxis * 100f * Time.deltaTime;
-        float moveZ = zAxis * 100f * Time.deltaTime;
+        float moveZ = movementValue * 100f * Time.deltaTime;
 
 
         //Debug.Log(moveX);
-        Debug.Log(zAxis);
+        
         if (moveZ <= 0)
         {
             moveX = 0f;
