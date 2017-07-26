@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d9271a3defdf1754b9468e391313621b
-timeCreated: 1500800189
+timeCreated: 1501038291
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -418,7 +418,7 @@ ModelImporter:
     4300036: l_wig
     4300038: H_DDS_MidRes
     4300040: hero_floor
-    7400000: Challenger_IdleB_001
+    7400000: ChallengerIdleB_003
     9500000: //RootNode
     13700000: H_DDS_HighRes
     13700002: H_DDS_MidRes
@@ -462,7 +462,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Challenger_IdleB_001
+      name: ChallengerIdleB_003
       takeName: Take 001
       firstFrame: 0
       lastFrame: 67
