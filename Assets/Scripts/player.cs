@@ -31,6 +31,11 @@ public class player : MonoBehaviour {
 	[SerializeField]
 	protected int blockValue = 10;
 	protected bool isBlock = false;
+
+	[SerializeField]
+	protected AttackBox attack_left;//set this to active when its attacking
+	[SerializeField]
+	protected AttackBox attack_right;//set this to active when its attacking
     // Use this for initialization
     public virtual void Start () {
         anim = GetComponent<Animator>();
@@ -61,7 +66,8 @@ public class player : MonoBehaviour {
 
     public virtual void Attack()
     {
-
+		attack_left.gameObject.SetActive(true);
+		attack_right.gameObject.SetActive(true);//will be turned off when the animation ends
     }
 
     public virtual void Guard()
