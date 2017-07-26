@@ -20,14 +20,24 @@ public class player : MonoBehaviour {
     protected float xAxis, zAxis;
     protected float movementValue = 0;
 
-    protected bool run,isRunning = false,isJumping = false;
+	protected bool run;
+	protected bool isRunning = false;
+	protected bool isJumping = false;
 
+	[SerializeField]
+	protected int max_Health = 100;
+	protected int health;
+
+	[SerializeField]
+	protected int blockValue = 10;
+	protected bool isBlock = false;
     // Use this for initialization
     public virtual void Start () {
         anim = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody>();
         run = false;
         CheckForDirection();
+		health = max_Health;
     }
 	
 	// Update is called once per frame
@@ -56,9 +66,12 @@ public class player : MonoBehaviour {
 
     public virtual void Guard()
     {
-
+		isBlock = true;
     }
-
+	public virtual void TakeDamage(int damage)
+	{
+		
+	}
     public virtual void Movement()
     {
         if (plyer_number == PLAYER_NUM.TWO)
@@ -112,14 +125,10 @@ public class player : MonoBehaviour {
 
 
         anim.SetFloat("inputH", movementValue * dirToEnemy);
-        //anim.SetFloat("inputV", xAxis);
-        //anim.SetBool("run", run);
         float moveX = 0;//xAxis * 100f * Time.deltaTime;
         float moveZ = movementValue * 100f * Time.deltaTime;
 
 
-        //Debug.Log(moveX);
-        
         if (moveZ <= 0)
         {
             moveX = 0f;
