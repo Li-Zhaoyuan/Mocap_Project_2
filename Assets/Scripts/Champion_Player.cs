@@ -3,13 +3,21 @@ using System.Collections;
 
 public class Champion_Player : player 
 {
-	void Start()
+    public override void Start()
 	{
 		base.Start();
 	}
-	void Update()
+    public override void Update()
 	{
-		base.Update();
+        anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
+
+        Attack();
+        Guard();
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
+        {
+            base.Update();
+        }
+       
 	}
 	public override void TakeDamage(int damage)
 	{
@@ -18,4 +26,37 @@ public class Champion_Player : player
 			calculatedDamage = 0;
 		health -= calculatedDamage;
 	}
+
+    public override void Attack()
+    {
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                anim.SetBool("attack", true);
+                //anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
+            }
+            else
+            {
+                anim.SetBool("attack", false);
+            }
+        }
+    }
+
+    public override void Guard()
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                anim.SetBool("guard", true);
+                //anim.SetFloat("inputV2" ,Input.GetAxis("Vertical_p2"));
+            }
+            else
+            {
+                anim.SetBool("guard", false);
+            }
+        }
+    }
+
 }
