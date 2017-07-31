@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 public enum PLAYER_NUM
 {
     ONE,
@@ -12,7 +13,7 @@ public class player : MonoBehaviour {
     public Rigidbody rigidBody;
     public GameObject enemy;
     public PLAYER_NUM plyer_number;
-
+	public Image healthBar;
     protected int dirToEnemy = 1;
 
     protected float inputH;
@@ -32,6 +33,9 @@ public class player : MonoBehaviour {
 	protected int blockValue = 10;
 	protected bool isBlock = false;
 
+	protected bool isAttack = false;
+	protected float constAttackTimer = 0.5f;//TODO :Remove hardcode
+	protected float attackTimer = 0.7f;
 	[SerializeField]
 	protected AttackBox attack_left;//set this to active when its attacking
 	[SerializeField]

@@ -10,8 +10,13 @@ public class AttackBox : MonoBehaviour {
 	{
 		Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), mainCollider);
 	}
-	void OnCollisionEnter(Collision collision)
+	void OnTriggerEnter(Collider collision)
 	{
-		collision.gameObject.GetComponent<player>().TakeDamage(damage);
+		Debug.Log("hit");
+		if(collision.tag == "Player")
+		{
+			collision.gameObject.GetComponent<player>().TakeDamage(damage);
+			gameObject.SetActive(false);
+		}
 	}
 }
