@@ -29,22 +29,42 @@ public class Champion_Player : player
 			else
 				attackTimer -= Time.deltaTime;
 		}
-       
-	}
-	public override void TakeDamage(int damage)
+        anim.SetBool("damagedLow", isHitLow);
+        anim.SetBool("damagedHigh", isHitHigh);
+        if (isHitHigh)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+                isHitHigh = false;
+        }
+        if (isHitLow)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+                isHitLow = false;
+        }
+    }
+	public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
 	{
 		int calculatedDamage = damage - blockValue;
 		if (calculatedDamage < 0)
 			calculatedDamage = 0;
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
-	}
+        Debug.Log(type);
+        if (type == ATTACK_TYPE.HIGH)
+        {
+            isHitHigh = true;
+        }
+        else if (type == ATTACK_TYPE.LOW)
+        {
+            isHitLow = true;
+        }
+    }
 
     public override void Attack()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") && isAttack == false)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKey(KeyCode.F))
             {
 				isAttack = true;
 				attack_left.gameObject.SetActive(true);

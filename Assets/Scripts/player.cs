@@ -7,6 +7,13 @@ public enum PLAYER_NUM
     TWO,
     TOTAL,
 };
+
+public enum ATTACK_TYPE
+{
+    LOW,
+    HIGH,
+    BLOCKED,
+}
 public class player : MonoBehaviour {
 
     public Animator anim;
@@ -34,7 +41,9 @@ public class player : MonoBehaviour {
 	protected bool isBlock = false;
 
 	protected bool isAttack = false;
-	protected float constAttackTimer = 0.5f;//TODO :Remove hardcode
+    protected bool isHitLow = false;
+    protected bool isHitHigh = false;
+    protected float constAttackTimer = 0.5f;//TODO :Remove hardcode
 	protected float attackTimer = 0.7f;
 	[SerializeField]
 	protected AttackBox attack_left;//set this to active when its attacking
@@ -81,7 +90,7 @@ public class player : MonoBehaviour {
     {
 		isBlock = true;
     }
-	public virtual void TakeDamage(int damage)
+	public virtual void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
 	{
 		
 	}
