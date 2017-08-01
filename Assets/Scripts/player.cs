@@ -63,6 +63,14 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	public virtual void Update () {
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            isHitHigh = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            isHitLow = true;
+        }
         Movement();
     }
 

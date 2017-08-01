@@ -33,12 +33,12 @@ public class Champion_Player : player
         anim.SetBool("damagedHigh", isHitHigh);
         if (isHitHigh)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
                 isHitHigh = false;
         }
         if (isHitLow)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
                 isHitLow = false;
         }
     }
