@@ -25,7 +25,8 @@ public class Champion_Player : player
 				attack_left.gameObject.SetActive(false);
 				attack_right.gameObject.SetActive(false);
 				attackTimer = constAttackTimer;
-			}
+                AudioManager.instance.playsound("champion_kick");
+            }
 			else
 				attackTimer -= Time.deltaTime;
 		}
