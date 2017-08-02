@@ -48,6 +48,8 @@ public class Challenger_Player : player
 			calculatedDamage = 0;
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
+		if(isBlock)
+			//run sound
         if(type == ATTACK_TYPE.HIGH)
         {
             isHitHigh = true;
@@ -88,11 +90,13 @@ public class Challenger_Player : player
         {
             if (Input.GetKeyDown(KeyCode.KeypadPeriod))
             {
+				isBlock = true;
                 anim.SetBool("guard", true);
 				blockValue = 10;//trash code for now
             }
             else
             {
+				isBlock = false;
                 anim.SetBool("guard", false);
 				blockValue = 0;
             }

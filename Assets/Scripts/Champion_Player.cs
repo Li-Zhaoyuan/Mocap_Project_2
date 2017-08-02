@@ -51,6 +51,8 @@ public class Champion_Player : player
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
         Debug.Log(type);
+		if(isBlock)
+			//run sound
         if (type == ATTACK_TYPE.HIGH)
         {
             isHitHigh = true;
@@ -95,12 +97,14 @@ public class Champion_Player : player
         {
             if (Input.GetKeyDown(KeyCode.G))
             {
+				isBlock = true;
                 anim.SetBool("guard", true);
 				blockValue = 10;
                 //anim.SetFloat("inputV2" ,Input.GetAxis("Vertical_p2"));
             }
             else
             {
+				isBlock = false;
 				blockValue = 0;
                 anim.SetBool("guard", false);
             }
