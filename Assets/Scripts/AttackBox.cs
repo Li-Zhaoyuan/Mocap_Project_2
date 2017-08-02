@@ -14,18 +14,19 @@ public class AttackBox : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider collision)
 	{
-		Debug.Log("hit");
 		if(collision.tag == "Player")
 		{
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
-            {
-                if (anim.GetCurrentAnimatorStateInfo(0).IsTag("High"))
-                    collision.gameObject.GetComponent<player>().TakeDamage(damage, ATTACK_TYPE.HIGH);
-                if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Low"))
-                    collision.gameObject.GetComponent<player>().TakeDamage(damage, ATTACK_TYPE.LOW);
-                else
-                    collision.gameObject.GetComponent<player>().TakeDamage(damage);
-            }
+			Debug.Log("hit");
+            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("High"))
+                collision.gameObject.GetComponent<player>().TakeDamage(damage*2, ATTACK_TYPE.HIGH);
+            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Low"))
+                collision.gameObject.GetComponent<player>().TakeDamage((int)(damage*0.5f), ATTACK_TYPE.LOW);
+            else
+                collision.gameObject.GetComponent<player>().TakeDamage(damage);
+			//if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+			//{
+			//}
+			//collision.gameObject.GetComponent<player>().AttackFinished(false);
             gameObject.SetActive(false);
 		}
 	}

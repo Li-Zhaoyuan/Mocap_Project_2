@@ -61,7 +61,10 @@ public class player : MonoBehaviour {
 		attack_left.gameObject.SetActive(false);
 		attack_right.gameObject.SetActive(false);//will be turned on when the animation starts
     }
-	
+	public void AttackFinished(bool attacked)
+	{
+		isAttack = attacked;
+	}
 	// Update is called once per frame
 	public virtual void Update () {
         if (Input.GetKeyDown(KeyCode.Alpha9))
@@ -91,8 +94,8 @@ public class player : MonoBehaviour {
 
     public virtual void Attack()
     {
-		attack_left.gameObject.SetActive(true);
-		attack_right.gameObject.SetActive(true);//will be turned off when the animation ends
+		//attack_left.gameObject.SetActive(true);
+		//attack_right.gameObject.SetActive(true);//will be turned off when the animation ends
     }
 
     public virtual void Guard()

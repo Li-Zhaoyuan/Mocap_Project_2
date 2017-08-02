@@ -5,12 +5,12 @@ public class MovingCam : MonoBehaviour {
     public Transform player1;
     public Transform player2;
 
-    Camera cam;
+    //Camera cam;
     float zDisplacement;
     float xDisplacement;
 	// Use this for initialization
 	void Start () {
-        cam = GetComponent<Camera>();
+        //cam = GetComponent<Camera>();
         xDisplacement = Mathf.Abs(player1.position.z - player2.position.z);
 
     }
