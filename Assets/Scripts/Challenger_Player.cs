@@ -47,8 +47,8 @@ public class Challenger_Player : player
 		int calculatedDamage = damage - blockValue;
 		if (calculatedDamage < 0)
 			calculatedDamage = 0;
-		health -= calculatedDamage;
-		healthBar.fillAmount = ((float)health / 100.0f);
+        health -= calculatedDamage ;
+        healthBar.fillAmount = ((float)health / 100.0f) ;
         if(type == ATTACK_TYPE.HIGH)
         {
             isHitHigh = true;

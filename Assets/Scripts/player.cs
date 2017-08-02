@@ -57,6 +57,7 @@ public class player : MonoBehaviour {
         CheckForDirection();
 		health = max_Health;
 
+
 		attack_left.gameObject.SetActive(false);
 		attack_right.gameObject.SetActive(false);//will be turned on when the animation starts
     }

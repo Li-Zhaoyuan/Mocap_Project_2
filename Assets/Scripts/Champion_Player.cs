@@ -48,7 +48,10 @@ public class Champion_Player : player
 		if (calculatedDamage < 0)
 			calculatedDamage = 0;
 		health -= calculatedDamage;
-		healthBar.fillAmount = ((float)health / 100.0f);
+		healthBar.fillAmount = ((float)health / 100.0f) * Time.deltaTime;
+
+        Debug.Log(healthBar.fillAmount);
+       
         Debug.Log(type);
         if (type == ATTACK_TYPE.HIGH)
         {
