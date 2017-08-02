@@ -38,7 +38,6 @@ public class Challenger_Player : player
         }
         if (isHitLow)
         {
-            //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
                 isHitLow = false;
         }
     }
@@ -63,12 +62,13 @@ public class Challenger_Player : player
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") && isAttack == false)
         {
-            if (Input.GetKey(KeyCode.Keypad0))
+            if (Input.GetKey(KeyCode.Keypad0) && isAttack == false)
             {
 				isAttack = true;
-				attack_left.gameObject.SetActive(true);
+				//attack_left.gameObject.SetActive(true);
 				attack_right.gameObject.SetActive(true);
 				anim.SetBool("attack", true);
+				attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
             }
             else
             {
