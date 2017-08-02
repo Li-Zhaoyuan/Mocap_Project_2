@@ -29,16 +29,16 @@ public class Challenger_Player : player
 			else
 				attackTimer -= Time.deltaTime;
 		}
-        anim.SetBool("damagedLow",isHitLow);
-        anim.SetBool("damagedHigh", isHitHigh);
         if (isHitHigh)
         {
             //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
-                isHitHigh = false;
+			isHitHigh = false;
+			anim.SetBool("damagedHigh", isHitHigh);
         }
         if (isHitLow)
         {
-                isHitLow = false;
+            isHitLow = false;
+			anim.SetBool("damagedLow",isHitLow);
         }
     }
 	public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
@@ -51,24 +51,29 @@ public class Challenger_Player : player
         if(type == ATTACK_TYPE.HIGH)
         {
             isHitHigh = true;
+			anim.SetBool("damagedHigh", isHitHigh);
         }
         else if(type == ATTACK_TYPE.LOW)
         {
             isHitLow = true;
+			anim.SetBool("damagedLow", isHitLow);
         }
 	}
 
     public override void Attack()
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") && isAttack == false)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") )
         {
-            if (Input.GetKey(KeyCode.Keypad0) && isAttack == false)
+            if (Input.GetKey(KeyCode.Keypad0))
             {
-				isAttack = true;
-				//attack_left.gameObject.SetActive(true);
-				attack_right.gameObject.SetActive(true);
-				anim.SetBool("attack", true);
-				attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
+				if(isAttack == false)
+				{
+					isAttack = true;
+					//attack_left.gameObject.SetActive(true);
+					attack_right.gameObject.SetActive(true);
+					anim.SetBool("attack", true);
+					attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
+				}
             }
             else
             {
