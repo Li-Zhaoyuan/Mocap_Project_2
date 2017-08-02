@@ -33,12 +33,12 @@ public class Champion_Player : player
         anim.SetBool("damagedHigh", isHitHigh);
         if (isHitHigh)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
                 isHitHigh = false;
         }
         if (isHitLow)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
                 isHitLow = false;
         }
     }
@@ -70,6 +70,8 @@ public class Champion_Player : player
 				attack_left.gameObject.SetActive(true);
 				attack_right.gameObject.SetActive(true);
                 anim.SetBool("attack", true);
+                AudioManager.instance.playsound("champion_kick");
+                Debug.Log("ickk");
                 //anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
             }
             else

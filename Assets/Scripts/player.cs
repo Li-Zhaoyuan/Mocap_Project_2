@@ -63,6 +63,14 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	public virtual void Update () {
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            isHitHigh = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            isHitLow = true;
+        }
         Movement();
     }
 
@@ -100,12 +108,12 @@ public class player : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                AudioManager.instance.playsound("walk");
+                AudioManager.instance.playsound("challenger_walk");
                 movementValue = Mathf.Clamp(movementValue - (Time.deltaTime * 2f), -1f, 1f);
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                AudioManager.instance.playsound("walk");
+                AudioManager.instance.playsound("challenger_walk");
                 movementValue = Mathf.Clamp(movementValue + (Time.deltaTime * 2f) , -1f, 1f);
             }
             else
@@ -126,12 +134,12 @@ public class player : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                AudioManager.instance.playsound("walk");
+                AudioManager.instance.playsound("champion_walk");
                 movementValue = Mathf.Clamp(movementValue - (Time.deltaTime * 2f), -1f, 1f);
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                AudioManager.instance.playsound("walk");
+                AudioManager.instance.playsound("champion_walk");
                 movementValue = Mathf.Clamp((Time.deltaTime * 2f) + movementValue, -1f, 1f);
             }
             else
