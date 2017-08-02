@@ -14,13 +14,26 @@ public class AttackBox : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider collision)
 	{
-		if(collision.tag == "Player")
-		{
-			Debug.Log("hit");
+        if (collision.tag == "Player")
+        {
+            //if ( collision.gameObject.GetComponent<player>().isBlock)
+            //{
+            //    AudioManager.instance.playsound("block");
+            //    return;
+            //}
+
+            Debug.Log("hit");
+            AudioManager.instance.playsound("hit_high" , true);
             if (anim.GetCurrentAnimatorStateInfo(0).IsTag("High"))
-                collision.gameObject.GetComponent<player>().TakeDamage(damage*2, ATTACK_TYPE.HIGH);
+            {
+                AudioManager.instance.playsound("hit_high");
+                collision.gameObject.GetComponent<player>().TakeDamage(damage * 2, ATTACK_TYPE.HIGH);
+            }
             if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Low"))
-                collision.gameObject.GetComponent<player>().TakeDamage((int)(damage*0.5f), ATTACK_TYPE.LOW);
+            {
+                collision.gameObject.GetComponent<player>().TakeDamage((int)(damage * 0.5f), ATTACK_TYPE.LOW);
+                AudioManager.instance.playsound("hit_low");
+            }
             else
                 collision.gameObject.GetComponent<player>().TakeDamage(damage);
 			//if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))

@@ -55,8 +55,11 @@ public class Champion_Player : player
         Debug.Log(healthBar.fillAmount);
        
         Debug.Log(type);
-		if(isBlock)
-			//run sound
+        if (type == ATTACK_TYPE.BLOCKED)
+        {
+            AudioManager.instance.playsound("block");
+            return;
+        }
         if (type == ATTACK_TYPE.HIGH)
         {
             isHitHigh = true;
@@ -82,7 +85,7 @@ public class Champion_Player : player
 					attack_right.gameObject.SetActive(true);
 					anim.SetBool("attack", true);
 					AudioManager.instance.playsound("champion_kick");
-					Debug.Log("ickk");
+					//Debug.Log("ickk");
 					attackTimer = anim.GetCurrentAnimatorStateInfo(0).length - 0.2f;
 					Debug.Log(attackTimer);
 					//anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));

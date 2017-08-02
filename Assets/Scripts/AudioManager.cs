@@ -23,9 +23,9 @@ public class Sound
         source = _source;
         _source.clip = clip;
     }
-    public void Play()
+    public void Play(bool cut)
     {
-        if (source.isPlaying)
+        if (source.isPlaying && !cut)
             return;
 
         source.volume = volume * (1 + Random.Range(-randVol/2f,randVol/2f));
@@ -54,14 +54,14 @@ public class AudioManager : MonoBehaviour
        // Debug.Log("fucking starting");
         for(int i = 0; i< sounds.Length; i++)
         {
-            Debug.Log(sounds.Length);
+            //Debug.Log(sounds.Length);
             GameObject sound = new GameObject("sound" + i + "_" + sounds[i].name);
             sounds[i].SetSource(sound.AddComponent<AudioSource>());
         }
 
        // playsound("walk");
     }
-    public void playsound(string _name)
+    public void playsound(string _name, bool cut = false)
     {
        // Debug.Log("playing sound");
         for(int i = 0; i< sounds.Length; i++)
@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
             
             if(sounds[i].name == _name)
             {
-                sounds[i].Play();
+                sounds[i].Play(cut);
                 return;
             }
         }

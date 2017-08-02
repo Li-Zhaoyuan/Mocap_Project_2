@@ -38,7 +38,7 @@ public class player : MonoBehaviour {
 
 	[SerializeField]
 	protected int blockValue = 10;
-	protected bool isBlock = false;
+	public bool isBlock = false;
 
 	protected bool isAttack = false;
     protected bool isHitLow = false;
