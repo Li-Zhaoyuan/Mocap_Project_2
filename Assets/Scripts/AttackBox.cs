@@ -17,9 +17,9 @@ public class AttackBox : MonoBehaviour {
 		if(collision.tag == "Player")
 		{
 			Debug.Log("hit");
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("High"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("High") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
                 collision.gameObject.GetComponent<player>().TakeDamage(damage*2, ATTACK_TYPE.HIGH);
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Low"))
+            else if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Low"))
                 collision.gameObject.GetComponent<player>().TakeDamage((int)(damage*0.5f), ATTACK_TYPE.LOW);
             else
                 collision.gameObject.GetComponent<player>().TakeDamage(damage);

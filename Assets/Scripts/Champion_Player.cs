@@ -10,6 +10,7 @@ public class Champion_Player : player
     public override void Update()
 	{
         anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
+        anim.SetFloat("inputH2", Input.GetAxis("Horizontal_p2"));
 
         Attack();
         Guard();
@@ -17,7 +18,11 @@ public class Champion_Player : player
         {
             base.Update();
         }
-		if(isAttack)
+        else
+        {
+            movementValue = 0;
+        }
+        if (isAttack)
 		{
 			if (attackTimer < 0)
 			{
@@ -31,20 +36,24 @@ public class Champion_Player : player
 				attackTimer -= Time.deltaTime;
 		}
        
+       
+    }
+    private void LateUpdate()
+    {
         if (isHitHigh)
         {
             //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
-			isHitHigh = false;
-			anim.SetBool("damagedHigh", isHitHigh);
+            isHitHigh = false;
+            anim.SetBool("damagedHigh", isHitHigh);
         }
         if (isHitLow)
         {
             //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
             isHitLow = false;
-			anim.SetBool("damagedLow", isHitLow);
+            anim.SetBool("damagedLow", isHitLow);
         }
     }
-	public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
+    public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
 	{
 		int calculatedDamage = damage - blockValue;
 		if (calculatedDamage < 0)
@@ -52,10 +61,11 @@ public class Champion_Player : player
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
         Debug.Log(type);
-		if(isBlock)
+		//if(isBlock)
 			//run sound
         if (type == ATTACK_TYPE.HIGH)
         {
+            Debug.Log("wqww");
             isHitHigh = true;
 			anim.SetBool("damagedHigh", isHitHigh);
         }
@@ -68,7 +78,8 @@ public class Champion_Player : player
 
     public override void Attack()
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") 
+            && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
         {
             if (Input.GetKey(KeyCode.F))
             {

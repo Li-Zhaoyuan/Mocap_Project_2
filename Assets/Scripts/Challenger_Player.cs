@@ -11,11 +11,16 @@ public class Challenger_Player : player
     public override void Update()
 	{
         anim.SetFloat("inputV2", Input.GetAxis("Vertical"));
+        anim.SetFloat("inputH2", Input.GetAxis("Horizontal"));
         Attack();
         Guard();
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
         {
             base.Update();
+        }
+        else
+        {
+            movementValue = 0;
         }
 		if (isAttack)
 		{
@@ -29,26 +34,32 @@ public class Challenger_Player : player
 			else
 				attackTimer -= Time.deltaTime;
 		}
+       
+    }
+
+    private void LateUpdate()
+    {
         if (isHitHigh)
         {
             //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
-			isHitHigh = false;
-			anim.SetBool("damagedHigh", isHitHigh);
+            isHitHigh = false;
+            anim.SetBool("damagedHigh", isHitHigh);
         }
         if (isHitLow)
         {
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
             isHitLow = false;
-			anim.SetBool("damagedLow",isHitLow);
+            anim.SetBool("damagedLow", isHitLow);
         }
     }
-	public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
+    public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
 	{
 		int calculatedDamage = damage - blockValue;
 		if (calculatedDamage < 0)
 			calculatedDamage = 0;
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
-		if(isBlock)
+		//if(isBlock)
 			//run sound
         if(type == ATTACK_TYPE.HIGH)
         {
@@ -64,7 +75,8 @@ public class Challenger_Player : player
 
     public override void Attack()
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") )
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard")
+             && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
         {
             if (Input.GetKey(KeyCode.Keypad0))
             {
