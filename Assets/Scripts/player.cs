@@ -38,7 +38,7 @@ public class player : MonoBehaviour {
 
 	[SerializeField]
 	protected int blockValue = 10;
-	protected bool isBlock = false;
+	public bool isBlock = false;
 
 	protected bool isAttack = false;
     protected bool isHitLow = false;
@@ -56,6 +56,7 @@ public class player : MonoBehaviour {
         run = false;
         CheckForDirection();
 		health = max_Health;
+
 
 		attack_left.gameObject.SetActive(false);
 		attack_right.gameObject.SetActive(false);//will be turned on when the animation starts

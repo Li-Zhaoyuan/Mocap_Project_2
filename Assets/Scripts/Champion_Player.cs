@@ -59,13 +59,20 @@ public class Champion_Player : player
 		if (calculatedDamage < 0)
 			calculatedDamage = 0;
 		health -= calculatedDamage;
-		healthBar.fillAmount = ((float)health / 100.0f);
+		healthBar.fillAmount = ((float)health / 100.0f) * Time.deltaTime;
+
+        Debug.Log(healthBar.fillAmount);
+       
         Debug.Log(type);
-		//if(isBlock)
-			//run sound
+
+        if (type == ATTACK_TYPE.BLOCKED)
+        {
+            AudioManager.instance.playsound("block");
+            return;
+        }
         if (type == ATTACK_TYPE.HIGH)
         {
-            Debug.Log("wqww");
+
             isHitHigh = true;
 			anim.SetBool("damagedHigh", isHitHigh);
         }
@@ -90,7 +97,7 @@ public class Champion_Player : player
 					attack_right.gameObject.SetActive(true);
 					anim.SetBool("attack", true);
 					AudioManager.instance.playsound("champion_kick");
-					Debug.Log("ickk");
+					//Debug.Log("ickk");
 					attackTimer = anim.GetCurrentAnimatorStateInfo(0).length - 0.2f;
 					Debug.Log(attackTimer);
 					//anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));

@@ -87,7 +87,8 @@ public class Challenger_Player : player
 					attack_right.gameObject.SetActive(true);
 					anim.SetBool("attack", true);
 					attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
-				}
+                    AudioManager.instance.playsound("challenger_punch");
+                }
             }
             else
             {
