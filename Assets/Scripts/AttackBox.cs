@@ -26,6 +26,7 @@ public class AttackBox : MonoBehaviour {
                 else
                     collision.gameObject.GetComponent<player>().TakeDamage(damage);
             }
+			//collision.gameObject.GetComponent<player>().AttackFinished(false);
             gameObject.SetActive(false);
 		}
 	}

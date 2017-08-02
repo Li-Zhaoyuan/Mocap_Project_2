@@ -64,14 +64,16 @@ public class Champion_Player : player
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") && isAttack == false)
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.F) && isAttack == false)
             {
 				isAttack = true;
-				attack_left.gameObject.SetActive(true);
+				//attack_left.gameObject.SetActive(true);
 				attack_right.gameObject.SetActive(true);
                 anim.SetBool("attack", true);
                 AudioManager.instance.playsound("champion_kick");
                 Debug.Log("ickk");
+				attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
+				Debug.Log(attackTimer);
                 //anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
             }
             else
