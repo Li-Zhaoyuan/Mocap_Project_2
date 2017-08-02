@@ -72,7 +72,7 @@ public class Champion_Player : player
                 anim.SetBool("attack", true);
                 AudioManager.instance.playsound("champion_kick");
                 Debug.Log("ickk");
-				attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
+				attackTimer = anim.GetCurrentAnimatorStateInfo(0).length - 0.2f;
 				Debug.Log(attackTimer);
                 //anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
             }

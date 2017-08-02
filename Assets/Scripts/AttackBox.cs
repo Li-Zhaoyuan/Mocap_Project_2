@@ -14,9 +14,9 @@ public class AttackBox : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider collision)
 	{
-		Debug.Log("hit");
 		if(collision.tag == "Player")
 		{
+			Debug.Log("hit");
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Damaged"))
             {
                 if (anim.GetCurrentAnimatorStateInfo(0).IsTag("High"))
