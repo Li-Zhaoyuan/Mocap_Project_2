@@ -1,0 +1,965 @@
+fileFormatVersion: 2
+guid: a7c342189e9bf5545817943eb75104b8
+timeCreated: 1501765838
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camera Interest
+    100002: Camera Interest 1
+    100004: Camera Interest 2
+    100006: Camera Interest 3
+    100008: Camera Interest 4
+    100010: Camera Interest 5
+    100012: Camera Interest 6
+    100014: //RootNode
+    100016: champion_char
+    100018: Champion_Ctrl_ChestEndEffector
+    100020: Champion_Ctrl_ChestOriginEffector
+    100022: Champion_Ctrl_Head
+    100024: Champion_Ctrl_HeadEffector
+    100026: Champion_Ctrl_Hips
+    100028: Champion_Ctrl_HipsEffector
+    100030: Champion_Ctrl_LeftAnkleEffector
+    100032: Champion_Ctrl_LeftArm
+    100034: Champion_Ctrl_LeftElbowEffector
+    100036: Champion_Ctrl_LeftFingerBase
+    100038: Champion_Ctrl_LeftFoot
+    100040: Champion_Ctrl_LeftFootEffector
+    100042: Champion_Ctrl_LeftForeArm
+    100044: Champion_Ctrl_LeftHand
+    100046: Champion_Ctrl_LeftHandEffector
+    100048: Champion_Ctrl_LeftHandIndex1
+    100050: Champion_Ctrl_LeftHandIndex2
+    100052: Champion_Ctrl_LeftHandIndex3
+    100054: Champion_Ctrl_LeftHandIndex4
+    100056: Champion_Ctrl_LeftHandIndexEffector
+    100058: Champion_Ctrl_LeftHandMiddle1
+    100060: Champion_Ctrl_LeftHandMiddle2
+    100062: Champion_Ctrl_LeftHandMiddle3
+    100064: Champion_Ctrl_LeftHandMiddle4
+    100066: Champion_Ctrl_LeftHandMiddleEffector
+    100068: Champion_Ctrl_LeftHandPinky1
+    100070: Champion_Ctrl_LeftHandPinky2
+    100072: Champion_Ctrl_LeftHandPinky3
+    100074: Champion_Ctrl_LeftHandPinky4
+    100076: Champion_Ctrl_LeftHandPinkyEffector
+    100078: Champion_Ctrl_LeftHandRing1
+    100080: Champion_Ctrl_LeftHandRing2
+    100082: Champion_Ctrl_LeftHandRing3
+    100084: Champion_Ctrl_LeftHandRing4
+    100086: Champion_Ctrl_LeftHandRingEffector
+    100088: Champion_Ctrl_LeftHandThumb1
+    100090: Champion_Ctrl_LeftHandThumb2
+    100092: Champion_Ctrl_LeftHandThumb3
+    100094: Champion_Ctrl_LeftHandThumb4
+    100096: Champion_Ctrl_LeftHandThumbEffector
+    100098: Champion_Ctrl_LeftHipEffector
+    100100: Champion_Ctrl_LeftKneeEffector
+    100102: Champion_Ctrl_LeftLeg
+    100104: Champion_Ctrl_LeftShoulder
+    100106: Champion_Ctrl_LeftShoulderEffector
+    100108: Champion_Ctrl_LeftToeBase
+    100110: Champion_Ctrl_LeftUpLeg
+    100112: Champion_Ctrl_LeftWristEffector
+    100114: Champion_Ctrl_Neck
+    100116: Champion_Ctrl_Reference
+    100118: Champion_Ctrl_RightAnkleEffector
+    100120: Champion_Ctrl_RightArm
+    100122: Champion_Ctrl_RightElbowEffector
+    100124: Champion_Ctrl_RightFingerBase
+    100126: Champion_Ctrl_RightFoot
+    100128: Champion_Ctrl_RightFootEffector
+    100130: Champion_Ctrl_RightForeArm
+    100132: Champion_Ctrl_RightHand
+    100134: Champion_Ctrl_RightHandEffector
+    100136: Champion_Ctrl_RightHandIndex1
+    100138: Champion_Ctrl_RightHandIndex2
+    100140: Champion_Ctrl_RightHandIndex3
+    100142: Champion_Ctrl_RightHandIndex4
+    100144: Champion_Ctrl_RightHandIndexEffector
+    100146: Champion_Ctrl_RightHandMiddle1
+    100148: Champion_Ctrl_RightHandMiddle2
+    100150: Champion_Ctrl_RightHandMiddle3
+    100152: Champion_Ctrl_RightHandMiddle4
+    100154: Champion_Ctrl_RightHandMiddleEffector
+    100156: Champion_Ctrl_RightHandPinky1
+    100158: Champion_Ctrl_RightHandPinky2
+    100160: Champion_Ctrl_RightHandPinky3
+    100162: Champion_Ctrl_RightHandPinky4
+    100164: Champion_Ctrl_RightHandPinkyEffector
+    100166: Champion_Ctrl_RightHandRing1
+    100168: Champion_Ctrl_RightHandRing2
+    100170: Champion_Ctrl_RightHandRing3
+    100172: Champion_Ctrl_RightHandRing4
+    100174: Champion_Ctrl_RightHandRingEffector
+    100176: Champion_Ctrl_RightHandThumb1
+    100178: Champion_Ctrl_RightHandThumb2
+    100180: Champion_Ctrl_RightHandThumb3
+    100182: Champion_Ctrl_RightHandThumb4
+    100184: Champion_Ctrl_RightHandThumbEffector
+    100186: Champion_Ctrl_RightHipEffector
+    100188: Champion_Ctrl_RightKneeEffector
+    100190: Champion_Ctrl_RightLeg
+    100192: Champion_Ctrl_RightShoulder
+    100194: Champion_Ctrl_RightShoulderEffector
+    100196: Champion_Ctrl_RightToeBase
+    100198: Champion_Ctrl_RightUpLeg
+    100200: Champion_Ctrl_RightWristEffector
+    100202: Champion_Ctrl_Spine
+    100204: Champion_Ctrl_Spine1
+    100206: Champion_Ctrl_Spine2
+    100208: champion_floor
+    100210: cut_1
+    100212: cut_2
+    100214: cut_3
+    100216: cut_4
+    100218: cut_5
+    100220: geo
+    100222: geo 1
+    100224: H_DDS_HighRes
+    100226: H_DDS_HighRes 1
+    100228: H_DDS_MidRes
+    100230: H_DDS_MidRes 1
+    100232: h_L_eye
+    100234: h_L_eye 1
+    100236: h_L_gland
+    100238: h_L_gland 1
+    100240: h_L_trans
+    100242: h_L_trans 1
+    100244: h_R_eye
+    100246: h_R_eye 1
+    100248: h_R_gland
+    100250: h_R_gland 1
+    100252: h_R_trans
+    100254: h_R_trans 1
+    100256: h_TeethDown
+    100258: h_TeethDown 1
+    100260: h_TeethUp
+    100262: h_TeethUp 1
+    100264: h_wig
+    100266: Head
+    100268: Head 1
+    100270: HeadEnd
+    100272: HeadEnd 1
+    100274: hero_char
+    100276: Hero_Ctrl_ChestEndEffector
+    100278: Hero_Ctrl_ChestOriginEffector
+    100280: Hero_Ctrl_Head
+    100282: Hero_Ctrl_HeadEffector
+    100284: Hero_Ctrl_Hips
+    100286: Hero_Ctrl_HipsEffector
+    100288: Hero_Ctrl_LeftAnkleEffector
+    100290: Hero_Ctrl_LeftArm
+    100292: Hero_Ctrl_LeftElbowEffector
+    100294: Hero_Ctrl_LeftFingerBase
+    100296: Hero_Ctrl_LeftFoot
+    100298: Hero_Ctrl_LeftFootEffector
+    100300: Hero_Ctrl_LeftForeArm
+    100302: Hero_Ctrl_LeftHand
+    100304: Hero_Ctrl_LeftHandEffector
+    100306: Hero_Ctrl_LeftHandIndex1
+    100308: Hero_Ctrl_LeftHandIndex2
+    100310: Hero_Ctrl_LeftHandIndex3
+    100312: Hero_Ctrl_LeftHandIndex4
+    100314: Hero_Ctrl_LeftHandIndexEffector
+    100316: Hero_Ctrl_LeftHandMiddle1
+    100318: Hero_Ctrl_LeftHandMiddle2
+    100320: Hero_Ctrl_LeftHandMiddle3
+    100322: Hero_Ctrl_LeftHandMiddle4
+    100324: Hero_Ctrl_LeftHandMiddleEffector
+    100326: Hero_Ctrl_LeftHandPinky1
+    100328: Hero_Ctrl_LeftHandPinky2
+    100330: Hero_Ctrl_LeftHandPinky3
+    100332: Hero_Ctrl_LeftHandPinky4
+    100334: Hero_Ctrl_LeftHandPinkyEffector
+    100336: Hero_Ctrl_LeftHandRing1
+    100338: Hero_Ctrl_LeftHandRing2
+    100340: Hero_Ctrl_LeftHandRing3
+    100342: Hero_Ctrl_LeftHandRing4
+    100344: Hero_Ctrl_LeftHandRingEffector
+    100346: Hero_Ctrl_LeftHandThumb1
+    100348: Hero_Ctrl_LeftHandThumb2
+    100350: Hero_Ctrl_LeftHandThumb3
+    100352: Hero_Ctrl_LeftHandThumb4
+    100354: Hero_Ctrl_LeftHandThumbEffector
+    100356: Hero_Ctrl_LeftHipEffector
+    100358: Hero_Ctrl_LeftKneeEffector
+    100360: Hero_Ctrl_LeftLeg
+    100362: Hero_Ctrl_LeftShoulder
+    100364: Hero_Ctrl_LeftShoulderEffector
+    100366: Hero_Ctrl_LeftToeBase
+    100368: Hero_Ctrl_LeftUpLeg
+    100370: Hero_Ctrl_LeftWristEffector
+    100372: Hero_Ctrl_Neck
+    100374: Hero_Ctrl_Reference
+    100376: Hero_Ctrl_RightAnkleEffector
+    100378: Hero_Ctrl_RightArm
+    100380: Hero_Ctrl_RightElbowEffector
+    100382: Hero_Ctrl_RightFingerBase
+    100384: Hero_Ctrl_RightFoot
+    100386: Hero_Ctrl_RightFootEffector
+    100388: Hero_Ctrl_RightForeArm
+    100390: Hero_Ctrl_RightHand
+    100392: Hero_Ctrl_RightHandEffector
+    100394: Hero_Ctrl_RightHandIndex1
+    100396: Hero_Ctrl_RightHandIndex2
+    100398: Hero_Ctrl_RightHandIndex3
+    100400: Hero_Ctrl_RightHandIndex4
+    100402: Hero_Ctrl_RightHandIndexEffector
+    100404: Hero_Ctrl_RightHandMiddle1
+    100406: Hero_Ctrl_RightHandMiddle2
+    100408: Hero_Ctrl_RightHandMiddle3
+    100410: Hero_Ctrl_RightHandMiddle4
+    100412: Hero_Ctrl_RightHandMiddleEffector
+    100414: Hero_Ctrl_RightHandPinky1
+    100416: Hero_Ctrl_RightHandPinky2
+    100418: Hero_Ctrl_RightHandPinky3
+    100420: Hero_Ctrl_RightHandPinky4
+    100422: Hero_Ctrl_RightHandPinkyEffector
+    100424: Hero_Ctrl_RightHandRing1
+    100426: Hero_Ctrl_RightHandRing2
+    100428: Hero_Ctrl_RightHandRing3
+    100430: Hero_Ctrl_RightHandRing4
+    100432: Hero_Ctrl_RightHandRingEffector
+    100434: Hero_Ctrl_RightHandThumb1
+    100436: Hero_Ctrl_RightHandThumb2
+    100438: Hero_Ctrl_RightHandThumb3
+    100440: Hero_Ctrl_RightHandThumb4
+    100442: Hero_Ctrl_RightHandThumbEffector
+    100444: Hero_Ctrl_RightHipEffector
+    100446: Hero_Ctrl_RightKneeEffector
+    100448: Hero_Ctrl_RightLeg
+    100450: Hero_Ctrl_RightShoulder
+    100452: Hero_Ctrl_RightShoulderEffector
+    100454: Hero_Ctrl_RightToeBase
+    100456: Hero_Ctrl_RightUpLeg
+    100458: Hero_Ctrl_RightWristEffector
+    100460: Hero_Ctrl_Spine
+    100462: Hero_Ctrl_Spine1
+    100464: Hero_Ctrl_Spine2
+    100466: hero_floor
+    100468: HighRez
+    100470: highRez
+    100472: Hips
+    100474: Hips 1
+    100476: l_wig
+    100478: LeftArm
+    100480: LeftArm 1
+    100482: LeftElbowEffectorAux1
+    100484: LeftEye
+    100486: LeftEye 1
+    100488: LeftFingerBase
+    100490: LeftFingerBase 1
+    100492: LeftFoot
+    100494: LeftFoot 1
+    100496: LeftForeArm
+    100498: LeftForeArm 1
+    100500: LeftHand
+    100502: LeftHand 1
+    100504: LeftHandIndex0
+    100506: LeftHandIndex1
+    100508: LeftHandIndex2
+    100510: LeftHandIndex3
+    100512: LeftHandIndex4
+    100514: LeftHandIndex5
+    100516: LeftHandIndex6
+    100518: LeftHandIndex7
+    100520: LeftHandIndex8
+    100522: LeftHandIndex9
+    100524: LeftHandMiddle1
+    100526: LeftHandMiddle2
+    100528: LeftHandMiddle3
+    100530: LeftHandMiddle4
+    100532: LeftHandMiddle5
+    100534: LeftHandMiddle6
+    100536: LeftHandMiddle7
+    100538: LeftHandMiddle8
+    100540: LeftHandPinky0
+    100542: LeftHandPinky1
+    100544: LeftHandPinky2
+    100546: LeftHandPinky3
+    100548: LeftHandPinky4
+    100550: LeftHandPinky5
+    100552: LeftHandPinky6
+    100554: LeftHandPinky7
+    100556: LeftHandPinky8
+    100558: LeftHandPinky9
+    100560: LeftHandRing1
+    100562: LeftHandRing2
+    100564: LeftHandRing3
+    100566: LeftHandRing4
+    100568: LeftHandRing5
+    100570: LeftHandRing6
+    100572: LeftHandRing7
+    100574: LeftHandRing8
+    100576: LeftHandThumb1
+    100578: LeftHandThumb2
+    100580: LeftHandThumb3
+    100582: LeftHandThumb4
+    100584: LeftHandThumb5
+    100586: LeftHandThumb6
+    100588: LeftHandThumb7
+    100590: LeftHandThumb8
+    100592: LeftLeg
+    100594: LeftLeg 1
+    100596: LeftShoulder
+    100598: LeftShoulder 1
+    100600: LeftToeBase
+    100602: LeftToeBase 1
+    100604: LeftToeEnd
+    100606: LeftToeEnd 1
+    100608: LeftUpLeg
+    100610: LeftUpLeg 1
+    100612: LeftWristEffectorAux1
+    100614: m_L_eye
+    100616: m_L_eye 1
+    100618: m_L_gland
+    100620: m_L_gland 1
+    100622: m_L_trans
+    100624: m_L_trans 1
+    100626: m_R_eye
+    100628: m_R_eye 1
+    100630: m_R_gland
+    100632: m_R_gland 1
+    100634: m_R_trans
+    100636: m_R_trans 1
+    100638: m_TeethDown
+    100640: m_TeethDown 1
+    100642: m_TeethUp
+    100644: m_TeethUp 1
+    100646: master
+    100648: master 1
+    100650: midRez
+    100652: midRez 1
+    100654: Neck
+    100656: Neck 1
+    100658: OG_cut_1
+    100660: pan_shot
+    100662: Reference
+    100664: Reference 1
+    100666: RightArm
+    100668: RightArm 1
+    100670: RightEye
+    100672: RightEye 1
+    100674: RightFingerBase
+    100676: RightFingerBase 1
+    100678: RightFoot
+    100680: RightFoot 1
+    100682: RightForeArm
+    100684: RightForeArm 1
+    100686: RightHand
+    100688: RightHand 1
+    100690: RightHandIndex0
+    100692: RightHandIndex1
+    100694: RightHandIndex2
+    100696: RightHandIndex3
+    100698: RightHandIndex4
+    100700: RightHandIndex5
+    100702: RightHandIndex6
+    100704: RightHandIndex7
+    100706: RightHandIndex8
+    100708: RightHandIndex9
+    100710: RightHandMiddle1
+    100712: RightHandMiddle2
+    100714: RightHandMiddle3
+    100716: RightHandMiddle4
+    100718: RightHandMiddle5
+    100720: RightHandMiddle6
+    100722: RightHandMiddle7
+    100724: RightHandMiddle8
+    100726: RightHandPinky0
+    100728: RightHandPinky1
+    100730: RightHandPinky2
+    100732: RightHandPinky3
+    100734: RightHandPinky4
+    100736: RightHandPinky5
+    100738: RightHandPinky6
+    100740: RightHandPinky7
+    100742: RightHandPinky8
+    100744: RightHandPinky9
+    100746: RightHandRing1
+    100748: RightHandRing2
+    100750: RightHandRing3
+    100752: RightHandRing4
+    100754: RightHandRing5
+    100756: RightHandRing6
+    100758: RightHandRing7
+    100760: RightHandRing8
+    100762: RightHandThumb1
+    100764: RightHandThumb2
+    100766: RightHandThumb3
+    100768: RightHandThumb4
+    100770: RightHandThumb5
+    100772: RightHandThumb6
+    100774: RightHandThumb7
+    100776: RightHandThumb8
+    100778: RightLeg
+    100780: RightLeg 1
+    100782: RightShoulder
+    100784: RightShoulder 1
+    100786: RightToeBase
+    100788: RightToeBase 1
+    100790: RightToeEnd
+    100792: RightToeEnd 1
+    100794: RightUpLeg
+    100796: RightUpLeg 1
+    100798: Spine
+    100800: Spine 1
+    100802: Spine1
+    100804: Spine2
+    100806: Spine3
+    100808: Spine4
+    400000: Camera Interest
+    400002: Camera Interest 1
+    400004: Camera Interest 2
+    400006: Camera Interest 3
+    400008: Camera Interest 4
+    400010: Camera Interest 5
+    400012: Camera Interest 6
+    400014: //RootNode
+    400016: champion_char
+    400018: Champion_Ctrl_ChestEndEffector
+    400020: Champion_Ctrl_ChestOriginEffector
+    400022: Champion_Ctrl_Head
+    400024: Champion_Ctrl_HeadEffector
+    400026: Champion_Ctrl_Hips
+    400028: Champion_Ctrl_HipsEffector
+    400030: Champion_Ctrl_LeftAnkleEffector
+    400032: Champion_Ctrl_LeftArm
+    400034: Champion_Ctrl_LeftElbowEffector
+    400036: Champion_Ctrl_LeftFingerBase
+    400038: Champion_Ctrl_LeftFoot
+    400040: Champion_Ctrl_LeftFootEffector
+    400042: Champion_Ctrl_LeftForeArm
+    400044: Champion_Ctrl_LeftHand
+    400046: Champion_Ctrl_LeftHandEffector
+    400048: Champion_Ctrl_LeftHandIndex1
+    400050: Champion_Ctrl_LeftHandIndex2
+    400052: Champion_Ctrl_LeftHandIndex3
+    400054: Champion_Ctrl_LeftHandIndex4
+    400056: Champion_Ctrl_LeftHandIndexEffector
+    400058: Champion_Ctrl_LeftHandMiddle1
+    400060: Champion_Ctrl_LeftHandMiddle2
+    400062: Champion_Ctrl_LeftHandMiddle3
+    400064: Champion_Ctrl_LeftHandMiddle4
+    400066: Champion_Ctrl_LeftHandMiddleEffector
+    400068: Champion_Ctrl_LeftHandPinky1
+    400070: Champion_Ctrl_LeftHandPinky2
+    400072: Champion_Ctrl_LeftHandPinky3
+    400074: Champion_Ctrl_LeftHandPinky4
+    400076: Champion_Ctrl_LeftHandPinkyEffector
+    400078: Champion_Ctrl_LeftHandRing1
+    400080: Champion_Ctrl_LeftHandRing2
+    400082: Champion_Ctrl_LeftHandRing3
+    400084: Champion_Ctrl_LeftHandRing4
+    400086: Champion_Ctrl_LeftHandRingEffector
+    400088: Champion_Ctrl_LeftHandThumb1
+    400090: Champion_Ctrl_LeftHandThumb2
+    400092: Champion_Ctrl_LeftHandThumb3
+    400094: Champion_Ctrl_LeftHandThumb4
+    400096: Champion_Ctrl_LeftHandThumbEffector
+    400098: Champion_Ctrl_LeftHipEffector
+    400100: Champion_Ctrl_LeftKneeEffector
+    400102: Champion_Ctrl_LeftLeg
+    400104: Champion_Ctrl_LeftShoulder
+    400106: Champion_Ctrl_LeftShoulderEffector
+    400108: Champion_Ctrl_LeftToeBase
+    400110: Champion_Ctrl_LeftUpLeg
+    400112: Champion_Ctrl_LeftWristEffector
+    400114: Champion_Ctrl_Neck
+    400116: Champion_Ctrl_Reference
+    400118: Champion_Ctrl_RightAnkleEffector
+    400120: Champion_Ctrl_RightArm
+    400122: Champion_Ctrl_RightElbowEffector
+    400124: Champion_Ctrl_RightFingerBase
+    400126: Champion_Ctrl_RightFoot
+    400128: Champion_Ctrl_RightFootEffector
+    400130: Champion_Ctrl_RightForeArm
+    400132: Champion_Ctrl_RightHand
+    400134: Champion_Ctrl_RightHandEffector
+    400136: Champion_Ctrl_RightHandIndex1
+    400138: Champion_Ctrl_RightHandIndex2
+    400140: Champion_Ctrl_RightHandIndex3
+    400142: Champion_Ctrl_RightHandIndex4
+    400144: Champion_Ctrl_RightHandIndexEffector
+    400146: Champion_Ctrl_RightHandMiddle1
+    400148: Champion_Ctrl_RightHandMiddle2
+    400150: Champion_Ctrl_RightHandMiddle3
+    400152: Champion_Ctrl_RightHandMiddle4
+    400154: Champion_Ctrl_RightHandMiddleEffector
+    400156: Champion_Ctrl_RightHandPinky1
+    400158: Champion_Ctrl_RightHandPinky2
+    400160: Champion_Ctrl_RightHandPinky3
+    400162: Champion_Ctrl_RightHandPinky4
+    400164: Champion_Ctrl_RightHandPinkyEffector
+    400166: Champion_Ctrl_RightHandRing1
+    400168: Champion_Ctrl_RightHandRing2
+    400170: Champion_Ctrl_RightHandRing3
+    400172: Champion_Ctrl_RightHandRing4
+    400174: Champion_Ctrl_RightHandRingEffector
+    400176: Champion_Ctrl_RightHandThumb1
+    400178: Champion_Ctrl_RightHandThumb2
+    400180: Champion_Ctrl_RightHandThumb3
+    400182: Champion_Ctrl_RightHandThumb4
+    400184: Champion_Ctrl_RightHandThumbEffector
+    400186: Champion_Ctrl_RightHipEffector
+    400188: Champion_Ctrl_RightKneeEffector
+    400190: Champion_Ctrl_RightLeg
+    400192: Champion_Ctrl_RightShoulder
+    400194: Champion_Ctrl_RightShoulderEffector
+    400196: Champion_Ctrl_RightToeBase
+    400198: Champion_Ctrl_RightUpLeg
+    400200: Champion_Ctrl_RightWristEffector
+    400202: Champion_Ctrl_Spine
+    400204: Champion_Ctrl_Spine1
+    400206: Champion_Ctrl_Spine2
+    400208: champion_floor
+    400210: cut_1
+    400212: cut_2
+    400214: cut_3
+    400216: cut_4
+    400218: cut_5
+    400220: geo
+    400222: geo 1
+    400224: H_DDS_HighRes
+    400226: H_DDS_HighRes 1
+    400228: H_DDS_MidRes
+    400230: H_DDS_MidRes 1
+    400232: h_L_eye
+    400234: h_L_eye 1
+    400236: h_L_gland
+    400238: h_L_gland 1
+    400240: h_L_trans
+    400242: h_L_trans 1
+    400244: h_R_eye
+    400246: h_R_eye 1
+    400248: h_R_gland
+    400250: h_R_gland 1
+    400252: h_R_trans
+    400254: h_R_trans 1
+    400256: h_TeethDown
+    400258: h_TeethDown 1
+    400260: h_TeethUp
+    400262: h_TeethUp 1
+    400264: h_wig
+    400266: Head
+    400268: Head 1
+    400270: HeadEnd
+    400272: HeadEnd 1
+    400274: hero_char
+    400276: Hero_Ctrl_ChestEndEffector
+    400278: Hero_Ctrl_ChestOriginEffector
+    400280: Hero_Ctrl_Head
+    400282: Hero_Ctrl_HeadEffector
+    400284: Hero_Ctrl_Hips
+    400286: Hero_Ctrl_HipsEffector
+    400288: Hero_Ctrl_LeftAnkleEffector
+    400290: Hero_Ctrl_LeftArm
+    400292: Hero_Ctrl_LeftElbowEffector
+    400294: Hero_Ctrl_LeftFingerBase
+    400296: Hero_Ctrl_LeftFoot
+    400298: Hero_Ctrl_LeftFootEffector
+    400300: Hero_Ctrl_LeftForeArm
+    400302: Hero_Ctrl_LeftHand
+    400304: Hero_Ctrl_LeftHandEffector
+    400306: Hero_Ctrl_LeftHandIndex1
+    400308: Hero_Ctrl_LeftHandIndex2
+    400310: Hero_Ctrl_LeftHandIndex3
+    400312: Hero_Ctrl_LeftHandIndex4
+    400314: Hero_Ctrl_LeftHandIndexEffector
+    400316: Hero_Ctrl_LeftHandMiddle1
+    400318: Hero_Ctrl_LeftHandMiddle2
+    400320: Hero_Ctrl_LeftHandMiddle3
+    400322: Hero_Ctrl_LeftHandMiddle4
+    400324: Hero_Ctrl_LeftHandMiddleEffector
+    400326: Hero_Ctrl_LeftHandPinky1
+    400328: Hero_Ctrl_LeftHandPinky2
+    400330: Hero_Ctrl_LeftHandPinky3
+    400332: Hero_Ctrl_LeftHandPinky4
+    400334: Hero_Ctrl_LeftHandPinkyEffector
+    400336: Hero_Ctrl_LeftHandRing1
+    400338: Hero_Ctrl_LeftHandRing2
+    400340: Hero_Ctrl_LeftHandRing3
+    400342: Hero_Ctrl_LeftHandRing4
+    400344: Hero_Ctrl_LeftHandRingEffector
+    400346: Hero_Ctrl_LeftHandThumb1
+    400348: Hero_Ctrl_LeftHandThumb2
+    400350: Hero_Ctrl_LeftHandThumb3
+    400352: Hero_Ctrl_LeftHandThumb4
+    400354: Hero_Ctrl_LeftHandThumbEffector
+    400356: Hero_Ctrl_LeftHipEffector
+    400358: Hero_Ctrl_LeftKneeEffector
+    400360: Hero_Ctrl_LeftLeg
+    400362: Hero_Ctrl_LeftShoulder
+    400364: Hero_Ctrl_LeftShoulderEffector
+    400366: Hero_Ctrl_LeftToeBase
+    400368: Hero_Ctrl_LeftUpLeg
+    400370: Hero_Ctrl_LeftWristEffector
+    400372: Hero_Ctrl_Neck
+    400374: Hero_Ctrl_Reference
+    400376: Hero_Ctrl_RightAnkleEffector
+    400378: Hero_Ctrl_RightArm
+    400380: Hero_Ctrl_RightElbowEffector
+    400382: Hero_Ctrl_RightFingerBase
+    400384: Hero_Ctrl_RightFoot
+    400386: Hero_Ctrl_RightFootEffector
+    400388: Hero_Ctrl_RightForeArm
+    400390: Hero_Ctrl_RightHand
+    400392: Hero_Ctrl_RightHandEffector
+    400394: Hero_Ctrl_RightHandIndex1
+    400396: Hero_Ctrl_RightHandIndex2
+    400398: Hero_Ctrl_RightHandIndex3
+    400400: Hero_Ctrl_RightHandIndex4
+    400402: Hero_Ctrl_RightHandIndexEffector
+    400404: Hero_Ctrl_RightHandMiddle1
+    400406: Hero_Ctrl_RightHandMiddle2
+    400408: Hero_Ctrl_RightHandMiddle3
+    400410: Hero_Ctrl_RightHandMiddle4
+    400412: Hero_Ctrl_RightHandMiddleEffector
+    400414: Hero_Ctrl_RightHandPinky1
+    400416: Hero_Ctrl_RightHandPinky2
+    400418: Hero_Ctrl_RightHandPinky3
+    400420: Hero_Ctrl_RightHandPinky4
+    400422: Hero_Ctrl_RightHandPinkyEffector
+    400424: Hero_Ctrl_RightHandRing1
+    400426: Hero_Ctrl_RightHandRing2
+    400428: Hero_Ctrl_RightHandRing3
+    400430: Hero_Ctrl_RightHandRing4
+    400432: Hero_Ctrl_RightHandRingEffector
+    400434: Hero_Ctrl_RightHandThumb1
+    400436: Hero_Ctrl_RightHandThumb2
+    400438: Hero_Ctrl_RightHandThumb3
+    400440: Hero_Ctrl_RightHandThumb4
+    400442: Hero_Ctrl_RightHandThumbEffector
+    400444: Hero_Ctrl_RightHipEffector
+    400446: Hero_Ctrl_RightKneeEffector
+    400448: Hero_Ctrl_RightLeg
+    400450: Hero_Ctrl_RightShoulder
+    400452: Hero_Ctrl_RightShoulderEffector
+    400454: Hero_Ctrl_RightToeBase
+    400456: Hero_Ctrl_RightUpLeg
+    400458: Hero_Ctrl_RightWristEffector
+    400460: Hero_Ctrl_Spine
+    400462: Hero_Ctrl_Spine1
+    400464: Hero_Ctrl_Spine2
+    400466: hero_floor
+    400468: HighRez
+    400470: highRez
+    400472: Hips
+    400474: Hips 1
+    400476: l_wig
+    400478: LeftArm
+    400480: LeftArm 1
+    400482: LeftElbowEffectorAux1
+    400484: LeftEye
+    400486: LeftEye 1
+    400488: LeftFingerBase
+    400490: LeftFingerBase 1
+    400492: LeftFoot
+    400494: LeftFoot 1
+    400496: LeftForeArm
+    400498: LeftForeArm 1
+    400500: LeftHand
+    400502: LeftHand 1
+    400504: LeftHandIndex0
+    400506: LeftHandIndex1
+    400508: LeftHandIndex2
+    400510: LeftHandIndex3
+    400512: LeftHandIndex4
+    400514: LeftHandIndex5
+    400516: LeftHandIndex6
+    400518: LeftHandIndex7
+    400520: LeftHandIndex8
+    400522: LeftHandIndex9
+    400524: LeftHandMiddle1
+    400526: LeftHandMiddle2
+    400528: LeftHandMiddle3
+    400530: LeftHandMiddle4
+    400532: LeftHandMiddle5
+    400534: LeftHandMiddle6
+    400536: LeftHandMiddle7
+    400538: LeftHandMiddle8
+    400540: LeftHandPinky0
+    400542: LeftHandPinky1
+    400544: LeftHandPinky2
+    400546: LeftHandPinky3
+    400548: LeftHandPinky4
+    400550: LeftHandPinky5
+    400552: LeftHandPinky6
+    400554: LeftHandPinky7
+    400556: LeftHandPinky8
+    400558: LeftHandPinky9
+    400560: LeftHandRing1
+    400562: LeftHandRing2
+    400564: LeftHandRing3
+    400566: LeftHandRing4
+    400568: LeftHandRing5
+    400570: LeftHandRing6
+    400572: LeftHandRing7
+    400574: LeftHandRing8
+    400576: LeftHandThumb1
+    400578: LeftHandThumb2
+    400580: LeftHandThumb3
+    400582: LeftHandThumb4
+    400584: LeftHandThumb5
+    400586: LeftHandThumb6
+    400588: LeftHandThumb7
+    400590: LeftHandThumb8
+    400592: LeftLeg
+    400594: LeftLeg 1
+    400596: LeftShoulder
+    400598: LeftShoulder 1
+    400600: LeftToeBase
+    400602: LeftToeBase 1
+    400604: LeftToeEnd
+    400606: LeftToeEnd 1
+    400608: LeftUpLeg
+    400610: LeftUpLeg 1
+    400612: LeftWristEffectorAux1
+    400614: m_L_eye
+    400616: m_L_eye 1
+    400618: m_L_gland
+    400620: m_L_gland 1
+    400622: m_L_trans
+    400624: m_L_trans 1
+    400626: m_R_eye
+    400628: m_R_eye 1
+    400630: m_R_gland
+    400632: m_R_gland 1
+    400634: m_R_trans
+    400636: m_R_trans 1
+    400638: m_TeethDown
+    400640: m_TeethDown 1
+    400642: m_TeethUp
+    400644: m_TeethUp 1
+    400646: master
+    400648: master 1
+    400650: midRez
+    400652: midRez 1
+    400654: Neck
+    400656: Neck 1
+    400658: OG_cut_1
+    400660: pan_shot
+    400662: Reference
+    400664: Reference 1
+    400666: RightArm
+    400668: RightArm 1
+    400670: RightEye
+    400672: RightEye 1
+    400674: RightFingerBase
+    400676: RightFingerBase 1
+    400678: RightFoot
+    400680: RightFoot 1
+    400682: RightForeArm
+    400684: RightForeArm 1
+    400686: RightHand
+    400688: RightHand 1
+    400690: RightHandIndex0
+    400692: RightHandIndex1
+    400694: RightHandIndex2
+    400696: RightHandIndex3
+    400698: RightHandIndex4
+    400700: RightHandIndex5
+    400702: RightHandIndex6
+    400704: RightHandIndex7
+    400706: RightHandIndex8
+    400708: RightHandIndex9
+    400710: RightHandMiddle1
+    400712: RightHandMiddle2
+    400714: RightHandMiddle3
+    400716: RightHandMiddle4
+    400718: RightHandMiddle5
+    400720: RightHandMiddle6
+    400722: RightHandMiddle7
+    400724: RightHandMiddle8
+    400726: RightHandPinky0
+    400728: RightHandPinky1
+    400730: RightHandPinky2
+    400732: RightHandPinky3
+    400734: RightHandPinky4
+    400736: RightHandPinky5
+    400738: RightHandPinky6
+    400740: RightHandPinky7
+    400742: RightHandPinky8
+    400744: RightHandPinky9
+    400746: RightHandRing1
+    400748: RightHandRing2
+    400750: RightHandRing3
+    400752: RightHandRing4
+    400754: RightHandRing5
+    400756: RightHandRing6
+    400758: RightHandRing7
+    400760: RightHandRing8
+    400762: RightHandThumb1
+    400764: RightHandThumb2
+    400766: RightHandThumb3
+    400768: RightHandThumb4
+    400770: RightHandThumb5
+    400772: RightHandThumb6
+    400774: RightHandThumb7
+    400776: RightHandThumb8
+    400778: RightLeg
+    400780: RightLeg 1
+    400782: RightShoulder
+    400784: RightShoulder 1
+    400786: RightToeBase
+    400788: RightToeBase 1
+    400790: RightToeEnd
+    400792: RightToeEnd 1
+    400794: RightUpLeg
+    400796: RightUpLeg 1
+    400798: Spine
+    400800: Spine 1
+    400802: Spine1
+    400804: Spine2
+    400806: Spine3
+    400808: Spine4
+    2300000: champion_floor
+    2300002: hero_floor
+    3300000: champion_floor
+    3300002: hero_floor
+    4300000: h_TeethDown
+    4300002: h_TeethUp
+    4300004: h_L_gland
+    4300006: h_L_eye
+    4300008: h_L_trans
+    4300010: h_R_gland
+    4300012: h_R_eye
+    4300014: h_R_trans
+    4300016: H_DDS_HighRes
+    4300018: h_wig
+    4300020: m_TeethDown
+    4300022: m_TeethUp
+    4300024: m_L_gland
+    4300026: m_L_eye
+    4300028: m_L_trans
+    4300030: m_R_gland
+    4300032: m_R_eye
+    4300034: m_R_trans
+    4300036: l_wig
+    4300038: H_DDS_MidRes
+    4300040: hero_floor
+    4300042: h_TeethDown 1
+    4300044: h_TeethUp 1
+    4300046: h_L_gland 1
+    4300048: h_L_eye 1
+    4300050: h_L_trans 1
+    4300052: h_R_gland 1
+    4300054: h_R_eye 1
+    4300056: h_R_trans 1
+    4300058: H_DDS_HighRes 1
+    4300060: m_TeethDown 1
+    4300062: m_TeethUp 1
+    4300064: m_L_gland 1
+    4300066: m_L_eye 1
+    4300068: m_L_trans 1
+    4300070: m_R_gland 1
+    4300072: m_R_eye 1
+    4300074: m_R_trans 1
+    4300076: H_DDS_MidRes 1
+    4300078: champion_floor
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: H_DDS_HighRes
+    13700002: H_DDS_HighRes 1
+    13700004: H_DDS_MidRes
+    13700006: H_DDS_MidRes 1
+    13700008: h_L_eye
+    13700010: h_L_eye 1
+    13700012: h_L_gland
+    13700014: h_L_gland 1
+    13700016: h_L_trans
+    13700018: h_L_trans 1
+    13700020: h_R_eye
+    13700022: h_R_eye 1
+    13700024: h_R_gland
+    13700026: h_R_gland 1
+    13700028: h_R_trans
+    13700030: h_R_trans 1
+    13700032: h_TeethDown
+    13700034: h_TeethDown 1
+    13700036: h_TeethUp
+    13700038: h_TeethUp 1
+    13700040: h_wig
+    13700042: l_wig
+    13700044: m_L_eye
+    13700046: m_L_eye 1
+    13700048: m_L_gland
+    13700050: m_L_gland 1
+    13700052: m_L_trans
+    13700054: m_L_trans 1
+    13700056: m_R_eye
+    13700058: m_R_eye 1
+    13700060: m_R_gland
+    13700062: m_R_gland 1
+    13700064: m_R_trans
+    13700066: m_R_trans 1
+    13700068: m_TeethDown
+    13700070: m_TeethDown 1
+    13700072: m_TeethUp
+    13700074: m_TeethUp 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
