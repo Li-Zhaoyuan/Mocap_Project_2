@@ -24,15 +24,13 @@ public class Challenger_Player : player
         }
 		if (isAttack)
 		{
-			if (attackTimer < 0)
+			float atkState = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+			if (atkState + 0.05f >= (float)((int)atkState + 1))
 			{
 				isAttack = false;
 				attack_left.gameObject.SetActive(false);
 				attack_right.gameObject.SetActive(false);
-				attackTimer = constAttackTimer;
 			}
-			else
-				attackTimer -= Time.deltaTime;
 		}
        
     }
@@ -86,7 +84,6 @@ public class Challenger_Player : player
 					//attack_left.gameObject.SetActive(true);
 					attack_right.gameObject.SetActive(true);
 					anim.SetBool("attack", true);
-					attackTimer = anim.GetCurrentAnimatorStateInfo(0).length;
                     AudioManager.instance.playsound("challenger_punch");
                 }
             }

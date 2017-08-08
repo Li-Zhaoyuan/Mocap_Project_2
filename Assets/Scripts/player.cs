@@ -43,8 +43,6 @@ public class player : MonoBehaviour {
 	protected bool isAttack = false;
     protected bool isHitLow = false;
     protected bool isHitHigh = false;
-    protected float constAttackTimer = 0.5f;//TODO :Remove hardcode
-	protected float attackTimer = 0.7f;
 	[SerializeField]
 	protected AttackBox attack_left;//set this to active when its attacking
 	[SerializeField]

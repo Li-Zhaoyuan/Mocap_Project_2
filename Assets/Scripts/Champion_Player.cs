@@ -12,8 +12,6 @@ public class Champion_Player : player
         anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
         anim.SetFloat("inputH2", Input.GetAxis("Horizontal_p2"));
 
-        Attack();
-        Guard();
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
         {
             base.Update();
@@ -24,17 +22,17 @@ public class Champion_Player : player
         }
         if (isAttack)
 		{
-			if (attackTimer < 0)
+			float atkState = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+			if (atkState + 0.05f >= (float)((int)atkState + 1))
 			{
 				isAttack = false;
 				attack_left.gameObject.SetActive(false);
 				attack_right.gameObject.SetActive(false);
-				attackTimer = constAttackTimer;
                 AudioManager.instance.playsound("champion_kick");
             }
-			else
-				attackTimer -= Time.deltaTime;
 		}
+        Attack();
+        Guard();
        
        
     }
@@ -96,10 +94,7 @@ public class Champion_Player : player
 					//attack_left.gameObject.SetActive(true);
 					attack_right.gameObject.SetActive(true);
 					anim.SetBool("attack", true);
-					AudioManager.instance.playsound("champion_kick");
-					//Debug.Log("ickk");
-					attackTimer = anim.GetCurrentAnimatorStateInfo(0).length - 0.2f;
-					Debug.Log(attackTimer);
+					AudioManager.instance.playsound("champion_kick");					
 					//anim.SetFloat("inputV2", Input.GetAxis("Vertical_p2"));
 				}
             }
