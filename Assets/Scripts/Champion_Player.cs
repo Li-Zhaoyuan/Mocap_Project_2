@@ -72,19 +72,27 @@ public class Champion_Player : player
         {
 
             isHitHigh = true;
-			anim.SetBool("damagedHigh", isHitHigh);
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+            {
+                anim.SetBool("damagedHigh", isHitHigh);
+            }
         }
         else if (type == ATTACK_TYPE.LOW)
         {
             isHitLow = true;
-			anim.SetBool("damagedLow", isHitLow);
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+            {
+                anim.SetBool("damagedLow", isHitLow);
+            }
         }
     }
 
     public override void Attack()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") 
-            && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
+            && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk")
+            && anim.GetFloat("inputH") <0.1f
+            && anim.GetFloat("inputH") > -0.1f)
         {
             if (Input.GetKey(KeyCode.F))
             {

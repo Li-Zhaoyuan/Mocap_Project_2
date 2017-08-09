@@ -57,19 +57,26 @@ public class Challenger_Player : player
 			calculatedDamage = 0;
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
-		//if(isBlock)
-			//run sound
-        if(type == ATTACK_TYPE.HIGH)
+        //if(isBlock)
+        //run sound
+        if (type == ATTACK_TYPE.HIGH)
         {
+
             isHitHigh = true;
-			anim.SetBool("damagedHigh", isHitHigh);
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+            {
+                anim.SetBool("damagedHigh", isHitHigh);
+            }
         }
-        else if(type == ATTACK_TYPE.LOW)
+        else if (type == ATTACK_TYPE.LOW)
         {
             isHitLow = true;
-			anim.SetBool("damagedLow", isHitLow);
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+            {
+                anim.SetBool("damagedLow", isHitLow);
+            }
         }
-	}
+    }
 
     public override void Attack()
     {

@@ -8,6 +8,13 @@ public class LoadScene : MonoBehaviour
     private float timer = 0;
     private bool startCountdown = false;
 
+    private SceneSwitcher sceneSwitcher;
+
+    void Start()
+    {
+        sceneSwitcher = FindObjectOfType<SceneSwitcher>();
+    }
+
     void Update()
     {
         if (startCountdown)
@@ -20,7 +27,8 @@ public class LoadScene : MonoBehaviour
 
     public void ChangeSceneOnClick()
     {
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
+        sceneSwitcher.ChangeScene((sceneName));
     }
 
     public void OnClick()
