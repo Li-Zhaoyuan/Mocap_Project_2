@@ -57,11 +57,11 @@ public class Champion_Player : player
 		if (calculatedDamage < 0)
 			calculatedDamage = 0;
 		health -= calculatedDamage;
-		healthBar.fillAmount = ((float)health / 100.0f) * Time.deltaTime;
+		healthBar.fillAmount = ((float)health / 100.0f);
 
         Debug.Log(healthBar.fillAmount);
        
-        Debug.Log(type);
+        Debug.Log(calculatedDamage);
 
         if (type == ATTACK_TYPE.BLOCKED)
         {
@@ -76,6 +76,11 @@ public class Champion_Player : player
             {
                 anim.SetBool("damagedHigh", isHitHigh);
             }
+            else
+            {
+                AudioManager.instance.playsound("block");
+                return;
+            }
         }
         else if (type == ATTACK_TYPE.LOW)
         {
@@ -83,6 +88,11 @@ public class Champion_Player : player
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
             {
                 anim.SetBool("damagedLow", isHitLow);
+            }
+            else
+            {
+                AudioManager.instance.playsound("block");
+                return;
             }
         }
     }
@@ -115,21 +125,35 @@ public class Champion_Player : player
 
     public override void Guard()
     {
+        if (anim.GetBool("guard"))
+        {
+            anim.SetBool("guard", false);
+        }
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
         {
             if (Input.GetKeyDown(KeyCode.G))
             {
 				isBlock = true;
                 anim.SetBool("guard", true);
-				blockValue = 10;
+				//blockValue = 50;
                 //anim.SetFloat("inputV2" ,Input.GetAxis("Vertical_p2"));
             }
             else
             {
 				isBlock = false;
-				blockValue = 0;
+// blockValue = 0;
                 anim.SetBool("guard", false);
             }
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+        {
+           // isBlock = false;
+            blockValue = maxBlockValue;
+            //anim.SetBool("guard", false);
+        }
+        else
+        {
+            blockValue = 0;
         }
     }
 
