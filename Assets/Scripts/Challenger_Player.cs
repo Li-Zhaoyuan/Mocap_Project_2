@@ -59,6 +59,11 @@ public class Challenger_Player : player
 		healthBar.fillAmount = ((float)health / 100.0f);
         //if(isBlock)
         //run sound
+        if (type == ATTACK_TYPE.BLOCKED)
+        {
+            AudioManager.instance.playsound("block");
+            return;
+        }
         if (type == ATTACK_TYPE.HIGH)
         {
 
@@ -66,6 +71,11 @@ public class Challenger_Player : player
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
             {
                 anim.SetBool("damagedHigh", isHitHigh);
+            }
+            else
+            {
+                AudioManager.instance.playsound("block");
+                return;
             }
         }
         else if (type == ATTACK_TYPE.LOW)
@@ -75,6 +85,11 @@ public class Challenger_Player : player
             {
                 anim.SetBool("damagedLow", isHitLow);
             }
+            else
+            {
+                AudioManager.instance.playsound("block");
+                return;
+            }
         }
     }
 
@@ -83,7 +98,7 @@ public class Challenger_Player : player
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard")
              && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
         {
-            if (Input.GetKey(KeyCode.Keypad0))
+            if (Input.GetKey(KeyCode.Keypad0) || Input.GetKey(KeyCode.Return))
             {
 				if(isAttack == false)
 				{
@@ -103,20 +118,36 @@ public class Challenger_Player : player
 
     public override void Guard()
     {
+        if(anim.GetBool("guard"))
+        {
+            anim.SetBool("guard", false);
+        }
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
         {
-            if (Input.GetKeyDown(KeyCode.KeypadPeriod))
+            if (Input.GetKeyDown(KeyCode.KeypadPeriod) || Input.GetKeyDown(KeyCode.Backslash))
             {
 				isBlock = true;
                 anim.SetBool("guard", true);
-				blockValue = 10;//trash code for now
+				//blockValue = 50;//trash code for now
             }
             else
             {
-				isBlock = false;
-                anim.SetBool("guard", false);
-				blockValue = 0;
+                
+                    isBlock = false;
+                    //blockValue = 0;
+                    anim.SetBool("guard", false);
+                
             }
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+        {
+            // isBlock = false;
+            blockValue = maxBlockValue;
+            //anim.SetBool("guard", false);
+        }
+        else
+        {
+            blockValue = 0;
         }
     }
 }

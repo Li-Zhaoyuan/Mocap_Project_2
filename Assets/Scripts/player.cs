@@ -21,6 +21,7 @@ public class player : MonoBehaviour {
     public GameObject enemy;
     public PLAYER_NUM plyer_number;
 	public Image healthBar;
+    public int maxBlockValue;
     protected int dirToEnemy = 1;
 
     protected float inputH;
@@ -37,7 +38,7 @@ public class player : MonoBehaviour {
 	protected int health;
 
 	[SerializeField]
-	protected int blockValue = 10;
+	protected int blockValue = 50;
 	public bool isBlock = false;
 
 	protected bool isAttack = false;
