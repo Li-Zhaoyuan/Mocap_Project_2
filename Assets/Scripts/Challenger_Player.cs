@@ -57,8 +57,12 @@ public class Challenger_Player : player
 			calculatedDamage = 0;
 		health -= calculatedDamage;
 		healthBar.fillAmount = ((float)health / 100.0f);
-        //if(isBlock)
-        //run sound
+		if(health < 50 && particleEmitter.activeSelf == false)
+		{
+			particleEmitter.SetActive(true);
+			attack_left.damage = (int)((float)attack_left.damage * 1.5f);
+			attack_right.damage = (int)((float)attack_right.damage * 1.5f);
+		}
         if (type == ATTACK_TYPE.BLOCKED)
         {
             AudioManager.instance.playsound("block");

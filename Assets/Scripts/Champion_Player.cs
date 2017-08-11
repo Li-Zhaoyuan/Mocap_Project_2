@@ -62,7 +62,12 @@ public class Champion_Player : player
         Debug.Log(healthBar.fillAmount);
        
         Debug.Log(calculatedDamage);
-
+		if (health < 50 && particleEmitter.activeSelf == false)
+		{
+			particleEmitter.SetActive(true);
+			attack_left.damage = (int)((float)attack_left.damage * 1.5f);
+			attack_right.damage = (int)((float)attack_right.damage * 1.5f);
+		}
         if (type == ATTACK_TYPE.BLOCKED)
         {
             AudioManager.instance.playsound("block");

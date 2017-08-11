@@ -49,6 +49,9 @@ public class player : MonoBehaviour {
 	[SerializeField]
 	protected AttackBox attack_right;//set this to active when its attacking
     // Use this for initialization
+	[SerializeField]
+	protected GameObject particleEmitter;
+
     public virtual void Start () {
         anim = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody>();
