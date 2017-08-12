@@ -52,48 +52,52 @@ public class Challenger_Player : player
     }
     public override void TakeDamage(int damage, ATTACK_TYPE type = ATTACK_TYPE.BLOCKED)
 	{
-		int calculatedDamage = damage - blockValue;
-		if (calculatedDamage < 0)
-			calculatedDamage = 0;
-		health -= calculatedDamage;
-		healthBar.fillAmount = ((float)health / 100.0f);
-		if(health < 50 && particleEmitter.activeSelf == false)
-		{
-			particleEmitter.SetActive(true);
-			attack_left.damage = (int)((float)attack_left.damage * 1.5f);
-			attack_right.damage = (int)((float)attack_right.damage * 1.5f);
-		}
+		
         if (type == ATTACK_TYPE.BLOCKED)
         {
             AudioManager.instance.playsound("block");
-            return;
+            //return;
         }
         if (type == ATTACK_TYPE.HIGH)
         {
 
             isHitHigh = true;
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardHigh"))
             {
                 anim.SetBool("damagedHigh", isHitHigh);
+                blockValue = 0;
             }
             else
             {
                 AudioManager.instance.playsound("block");
-                return;
+                //return;
             }
         }
         else if (type == ATTACK_TYPE.LOW)
         {
             isHitLow = true;
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardLow"))
             {
                 anim.SetBool("damagedLow", isHitLow);
+                blockValue = 0;
             }
             else
             {
                 AudioManager.instance.playsound("block");
-                return;
+                //return;
             }
+        }
+
+        int calculatedDamage = damage - blockValue;
+        if (calculatedDamage < 0)
+            calculatedDamage = 0;
+        health -= calculatedDamage;
+        healthBar.fillAmount = ((float)health / 100.0f);
+        if (health < 50 && particleEmitter.activeSelf == false)
+        {
+            particleEmitter.SetActive(true);
+            attack_left.damage = (int)((float)attack_left.damage * 1.5f);
+            attack_right.damage = (int)((float)attack_right.damage * 1.5f);
         }
     }
 
@@ -143,7 +147,8 @@ public class Challenger_Player : player
                 
             }
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardHigh")
+            || anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardLow"))
         {
             // isBlock = false;
             blockValue = maxBlockValue;
