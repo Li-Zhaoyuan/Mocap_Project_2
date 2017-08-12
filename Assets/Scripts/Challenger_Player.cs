@@ -65,6 +65,7 @@ public class Challenger_Player : player
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardHigh"))
             {
                 anim.SetBool("damagedHigh", isHitHigh);
+                AudioManager.instance.playsound("damage_high",true);
                 blockValue = 0;
             }
             else
@@ -79,6 +80,7 @@ public class Challenger_Player : player
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardLow"))
             {
                 anim.SetBool("damagedLow", isHitLow);
+                AudioManager.instance.playsound("damage_low",true);
                 blockValue = 0;
             }
             else

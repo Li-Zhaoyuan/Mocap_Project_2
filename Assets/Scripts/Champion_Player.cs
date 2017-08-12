@@ -28,7 +28,7 @@ public class Champion_Player : player
 				isAttack = false;
 				attack_left.gameObject.SetActive(false);
 				attack_right.gameObject.SetActive(false);
-                AudioManager.instance.playsound("champion_kick");
+                //AudioManager.instance.playsound("champion_kick");
             }
 		}
         Attack();
@@ -66,6 +66,7 @@ public class Champion_Player : player
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardHigh"))
             {
                 anim.SetBool("damagedHigh", isHitHigh);
+                AudioManager.instance.playsound("damage_high",true);
                 blockValue = 0;
             }
             else
@@ -80,6 +81,7 @@ public class Champion_Player : player
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardLow"))
             {
                 anim.SetBool("damagedLow", isHitLow);
+                AudioManager.instance.playsound("damage_low",true);
                 blockValue = 0;
             }
             else
