@@ -21,7 +21,7 @@ public class player : MonoBehaviour {
     public GameObject enemy;
     public PLAYER_NUM plyer_number;
 	public Image healthBar;
-    public int maxBlockValue;
+    public int maxBlockValue = 5;
     protected int dirToEnemy = 1;
 
     protected float inputH;
@@ -51,7 +51,8 @@ public class player : MonoBehaviour {
     // Use this for initialization
 	[SerializeField]
 	protected GameObject particleEmitter;
-
+	[SerializeField]
+	protected GameObject CenterOfBody;
     public virtual void Start () {
         anim = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody>();

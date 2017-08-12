@@ -151,7 +151,6 @@ public class Champion_Player : player
             else
             {
 				isBlock = false;
-// blockValue = 0;
                 anim.SetBool("guard", false);
             }
         }
@@ -160,11 +159,15 @@ public class Champion_Player : player
         {
            // isBlock = false;
             blockValue = maxBlockValue;
+			Vector3 temp = GetComponent<BoxCollider>().center;
+			GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody.transform.position.y, temp.z);
             //anim.SetBool("guard", false);
         }
-        else
+        else if(isBlock == false)
         {
             blockValue = 0;
+			Vector3 temp = GetComponent<BoxCollider>().center;
+			GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody.transform.position.y, temp.z);
         }
     }
 
