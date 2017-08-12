@@ -140,27 +140,36 @@ public class Challenger_Player : player
             }
             else
             {
-                
-                    isBlock = false;
-                    //blockValue = 0;
-                    anim.SetBool("guard", false);
-                
+                isBlock = false;
+                //blockValue = 0;
+                anim.SetBool("guard", false);
+				//hardcode to prevent mutiple checks
+				Vector3 tempSize = GetComponent<BoxCollider>().size;
+				if (tempSize.y < player.playerHeight)
+				{
+					tempSize.y = player.playerHeight;
+					GetComponent<BoxCollider>().size = tempSize;
+					Vector3 temp = GetComponent<BoxCollider>().center;
+					GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody, temp.z);
+				}
             }
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardHigh")
-            || anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardLow"))
-        {
-            // isBlock = false;
-            blockValue = maxBlockValue;
+		if (anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardHigh"))
+		{
+			// isBlock = false;
+			blockValue = maxBlockValue;
 			Vector3 temp = GetComponent<BoxCollider>().center;
-			GetComponent<BoxCollider>().center = new Vector3(temp.x,CenterOfBody.transform.position.y,temp.z);
-            //anim.SetBool("guard", false);
-        }
-        else
-        {
+			GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody, temp.z);
+			//anim.SetBool("guard", false);
+		}
+		else if (anim.GetCurrentAnimatorStateInfo(0).IsTag("GuardLow"))
+		{
+			blockValue = maxBlockValue;
+			Vector3 tempSize = GetComponent<BoxCollider>().size;
+			tempSize.y = 0.9f;
+			GetComponent<BoxCollider>().size = tempSize;
 			Vector3 temp = GetComponent<BoxCollider>().center;
-			GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody.transform.position.y, temp.z);
-            blockValue = 0;
-        }
+			GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody/2.0f, temp.z);
+		}
     }
 }

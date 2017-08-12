@@ -38,7 +38,7 @@ public class player : MonoBehaviour {
 	protected int health;
 
 	[SerializeField]
-	protected int blockValue = 50;
+	protected int blockValue = 0;
 	public bool isBlock = false;
 
 	protected bool isAttack = false;
@@ -51,8 +51,10 @@ public class player : MonoBehaviour {
     // Use this for initialization
 	[SerializeField]
 	protected GameObject particleEmitter;
-	[SerializeField]
-	protected GameObject CenterOfBody;
+
+	protected static float CenterOfBody = 0.9f;
+
+	public static float playerHeight = 1.80f;
     public virtual void Start () {
         anim = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody>();
