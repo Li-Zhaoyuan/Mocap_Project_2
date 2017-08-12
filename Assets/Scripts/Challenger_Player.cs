@@ -147,10 +147,14 @@ public class Challenger_Player : player
         {
             // isBlock = false;
             blockValue = maxBlockValue;
+			Vector3 temp = GetComponent<BoxCollider>().center;
+			GetComponent<BoxCollider>().center = new Vector3(temp.x,CenterOfBody.transform.position.y,temp.z);
             //anim.SetBool("guard", false);
         }
         else
         {
+			Vector3 temp = GetComponent<BoxCollider>().center;
+			GetComponent<BoxCollider>().center = new Vector3(temp.x, CenterOfBody.transform.position.y, temp.z);
             blockValue = 0;
         }
     }
