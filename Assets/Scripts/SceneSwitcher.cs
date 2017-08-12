@@ -9,9 +9,25 @@ public class SceneSwitcher : MonoBehaviour {
     public Scene nextScene;
     public bool goBack = false;
 
+    private void Awake()
+    {
+        GameObject other = GameObject.Find("scenesystem");
+        if (other == null)
+        {
+            gameObject.name = "scenesystem";
+            DontDestroyOnLoad(this);
+            //return;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+
+    }
     // Use this for initialization
     void Start () {
-        DontDestroyOnLoad(this);
+        
         currentScene = SceneManager.GetActiveScene();
         prevScene = SceneManager.GetActiveScene();
         nextScene = SceneManager.GetActiveScene();
