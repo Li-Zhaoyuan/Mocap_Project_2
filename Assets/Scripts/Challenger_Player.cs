@@ -106,7 +106,8 @@ public class Challenger_Player : player
     public override void Attack()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard")
-             && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk"))
+             && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk")
+             && movementValue == 0)
         {
             if (Input.GetKey(KeyCode.Keypad0) || Input.GetKey(KeyCode.Return))
             {
@@ -123,6 +124,10 @@ public class Challenger_Player : player
             {
                 anim.SetBool("attack", false);
             }
+        }
+        else
+        {
+            anim.SetBool("attack", false);
         }
     }
 

@@ -30,6 +30,20 @@ public class LoadScene : MonoBehaviour
         //SceneManager.LoadScene(sceneName);
         sceneSwitcher.ChangeScene((sceneName));
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void SetGoBackTrue()
+    {
+        sceneSwitcher.goBack = true;
+    }
+
+    public void SetGoBackFalse()
+    {
+        sceneSwitcher.goBack = false;
+    }
 
     public void OnClick()
     {

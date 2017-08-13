@@ -52,6 +52,16 @@ public class SceneSwitcher : MonoBehaviour {
         goBack = true;
     }
 
+    public void SetGoBackFalse()
+    {
+        goBack = false;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ChangeSceneToChampionFinish()
     {
         int temp = Random.Range(0, 2);
@@ -72,18 +82,18 @@ public class SceneSwitcher : MonoBehaviour {
     public void ChangeSceneToChallengerFinish()
     {
         //challenger things not done yet
-        int temp = Random.Range(0, 1);
+        int temp = Random.Range(0, 2);
         if (temp == 0)
         {
-            SceneManager.LoadScene("Champion_finisherA");
+            SceneManager.LoadScene("Challenger_finisherB");
             prevScene = currentScene;
-            currentScene = SceneManager.GetSceneByName("Champion_finisherA");
+            currentScene = SceneManager.GetSceneByName("Challenger_finisherB");
         }
         else
         {
-            SceneManager.LoadScene("Champion_FinisherB");
+            SceneManager.LoadScene("Challenger_finisherA");
             prevScene = currentScene;
-            currentScene = SceneManager.GetSceneByName("Champion_FinisherB");
+            currentScene = SceneManager.GetSceneByName("Challenger_finisherA");
         }
 
     }

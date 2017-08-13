@@ -113,8 +113,7 @@ public class Champion_Player : player
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Guard") 
             && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Walk")
-            && anim.GetFloat("inputH") <0.1f
-            && anim.GetFloat("inputH") > -0.1f)
+            && movementValue == 0)
         {
             if (Input.GetKey(KeyCode.F))
             {
@@ -132,6 +131,10 @@ public class Champion_Player : player
             {
                 anim.SetBool("attack", false);
             }
+        }
+        else
+        {
+            anim.SetBool("attack", false);
         }
     }
 
